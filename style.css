@@ -1,0 +1,260 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body */
+body{
+    font-family: Arial,  sans-serif;
+    background-color: #F8F5F0;
+    color: #2F2F2F;
+    line-height: 1.6;
+
+}
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #FA98B;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #2F2F2F;
+    font-weight: 600;
+}
+.nav-links a:hover{
+    color: #8FA98B;
+}
+
+/* hero section */
+.hero{
+    height: 90vh;
+    background-image: linear-gradient(rgba(255,255,255,0.4)
+    ,rgba(255,255,255,0.4)), url("images/hero-living room.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2F2F2F;
+
+}
+.hero-content{
+    background: rgba(255,255,255,0.75);
+    padding: 30px;
+    border-radius: 10px;
+}
+.hero h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.hero p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.hero button{
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8FA98B;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+.hero button:hover{
+    background-color: #748970;
+}
+
+/* section heading */
+section{
+    padding: 70px 8%;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+/*services*/
+.service-container{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-card{
+    background: white;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.service-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.service-card h3{
+    padding: 15px;
+}
+.service-card p{
+    padding: 0 15px 20px;
+}
+.service-card:hover{
+    transform: translateY(-8px);
+    transition: 0.3s;
+}
+/*gallery*/
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.gallery-container img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*ai section*/
+.ai-card{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ai-text{
+    flex: 1;
+}
+.ai-image{
+     flex: 1;
+
+}
+.ai-image img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.ai-text ul{
+    margin: 20px 0;
+    padding-left: 20px;
+}
+.ai-text button{
+    padding: 12px 25px;
+    border: none;
+    background-color: #8FA98B;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* how it works*/
+
+.steps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.step{
+    width: 180px;
+    text-align: center;
+}
+.step{
+    background: white;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.step h3{
+    font-size: 35px;
+    color: #8FA98B;
+}
+/*testimonials*/
+.testimonials-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.testimonials-card{
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.testimonials-card h4{
+    margin-top: 15px;
+    color: #8FA98B;
+}
+/*cta*/
+.cta{
+    text-align: center;
+    background-color: #8FA98B;
+    color: white;
+}
+.cta button{
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*footer*/
+footer{
+    background-color: #2F2F2F;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+footer p{
+    margin-top: 10px;
+}
+/*responsive*/
+@media(max-width:768px) {
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .gallery-container{
+        grid-template-columns:1fr;
+    }
+    .hero h1{
+        font-size: 35px;
+    }
+    .ai-card{
+        flex-direction: column;
+    }
+    
+}
